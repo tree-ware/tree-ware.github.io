@@ -1,12 +1,2 @@
-# Introduction
-
-Tree-ware is software that uses trees as a fundamental unit of data. [It's trees all the way down](https://en.wikipedia.org/wiki/Turtles_all_the_way_down).
-
-[GitHub repositories](https://github.com/tree-ware).
-
-# Documentation
-
-* [Kotlin Core](http://www.tree-ware.org/tree-ware-kotlin-core/)
-* [Kotlin MySQL](http://www.tree-ware.org/tree-ware-kotlin-mysql/)
-* [Kotlin Server](http://www.tree-ware.org/tree-ware-kotlin-server/)
-* [Angular UI](http://www.tree-ware.org/tree-ware-angular-ui/)
+This repository contains the source code for the https://www.tree-ware.org website.
+It is a GitHub Pages Jekyll site.
