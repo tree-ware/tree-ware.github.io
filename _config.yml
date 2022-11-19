@@ -23,7 +23,10 @@ domain: tree-ware.org
 url: https://www.tree-ware.org
 github_username:  tree-ware
 
-# Build settings
+header_pages:
+  - presentations.md
+  - docs.md
+
 theme: minima
 minima:
   skin: dark
