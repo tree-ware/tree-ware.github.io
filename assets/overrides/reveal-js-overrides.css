@@ -9,3 +9,7 @@
 .reveal h6 {
   text-transform: none;
 }
+
+.reveal li {
+    margin-bottom: 1rem;
+}

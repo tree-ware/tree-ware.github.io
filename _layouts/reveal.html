@@ -3,6 +3,7 @@
 <head>
     <link rel="stylesheet" href="/assets/reveal.js-4.4.0/dist/reveal.css">
     <link rel="stylesheet" href="/assets/reveal.js-4.4.0/dist/theme/white.css">
+    <link rel="stylesheet" href="/assets/overrides/reveal-js-overrides.css">
 </head>
 <body>
 <div class="reveal">
@@ -11,6 +12,10 @@
     </div>
 </div>
 <script src="/assets/reveal.js-4.4.0/dist/reveal.js"></script>
-<script>Reveal.initialize();</script>
+<script>
+Reveal.initialize({
+    navigationMode: 'linear'
+});
+</script>
 </body>
 </html>
