@@ -1,0 +1,122 @@
+---
+layout: reveal
+---
+
+<section>
+    <h1>Tree-Ware Architecture</h1>
+    <p>Accelerate your software development!</p>
+</section>
+
+<section>
+    <h1>Data-First</h1>
+    <section>The data corresponding to FUNCTIONAL features must be defined first</section>
+    <section>Tree-ware provides the non-functional features for this data</section>
+</section>
+
+<section>
+    <h1>Model</h1>
+    <section>The runtime data is called <b>Model</b></section>
+    <section>It is (primarily) a tree structure</section>
+</section>
+
+<section>
+    <h1>Meta-Model</h1>
+    <section>The definition for the Model is called <b>Meta-Model</b></section>
+    <section>Many data types are supported</section>
+    <section>Packages, Entities, Fields, Enumerations, Primitives, Aliases</section>
+    <section>Compositions (nested entities) make it a tree</section>
+    <section>Associations (references to other entities) make it a directed-graph</section>
+    <section>Various constraints can be declared in the meta-model</section>
+</section>
+
+<section>
+    <h1>Aux Data</h1>
+    <section>Auxiliary data can be attached to any node in the model tree</section>
+    <section>Used for non-functional aspects</section>
+    <section>Examples: errors, access-control definitions, DB mappings</section>
+</section>
+
+<section>
+    <h1>System Architecture</h1>
+    <section>There is a pipeline from the UI to the DB and beyond</section>
+    <section>Models flow through this pipeline in both directions</section>
+    <section>Most pipeline stages implement a non-functional feature</section>
+    <section>Custom business-logic is also a stage in the pipeline</section>
+    <section>Each non-functional stage is implemented as an operator</section>
+    <section>An operator operates on the model flowing through the pipeline</section>
+    <section>Pipeline stages can be run on a single machine or distributed across multiple machines</section>
+    <!-- TODO add a pipeline diagram -->
+</section>
+
+<section>
+    <h1>Model Operator</h1>
+    <section>Operates on one or more models</section>
+    <section>Codec: encode/decode JSON, Protobuf, SQL, etc</section>
+    <section>Intersection: determine what is common between 2 or more models</section>
+    <section>Union: determine the combination of 2 or more models</section>
+    <section>Difference: determine the difference between 2 models</section>
+    <section>Operators can be composed to create versatile expressions</section>
+    <section>Non-functional features are implemented using operators</section>
+</section>
+
+<section>
+    <h1>Tree-Ware Design Pattern</h1>
+    <section>Use models for functional-data</section>
+    <section>Use aux data for non-functional data</section>
+    <section>Use model operators to implement non-functional features</section>
+</section>
+
+<section>
+    <h1>API</h1>
+    <section>Get-requests are model trees specifying the parts of the model to be returned</section>
+    <section>Get-responses are model trees corresponding to the parts requested</section>
+    <section>Set-requests are model trees containing the nodes to be created/updated/deleted</section>
+    <section>Set-request models are validated against the meta-model</section>
+    <section>Fan-out: a request can be split into smaller trees and load-balanced to different servers</section>
+    <section>Fan-in: responses from the fan-out can be combined into a single response</section>
+    <section>Stream: responses from the fan-out can be streamed back to the client as they arrive</section>
+    <section>Both set-requests and get-requests are via HTTPS POST and JSON</section>
+</section>
+
+<section>
+    <h1>RBAC</h1>
+    <section>
+        <p>An RBAC model contains nodes that are accessible</p>
+        <p>Aux data on these nodes specify the required permissions</p>
+    </section>
+    <section>An intersection operator intersects API requests/responses with the RBAC model</section>
+    <section>Only the common parts (the intersection result) are permitted to the next stage in the pipeline</section>
+    <!-- TODO: diagram  -->
+</section>
+
+<section>
+    <h1>Feature Flags</h1>
+    <section>TODO</section>
+</section>
+
+<section>
+    <h1>DB</h1>
+    <section>TODO</section>
+</section>
+
+<section>
+    <h1>API & DB Migration</h1>
+    <section>TODO</section>
+</section>
+
+<section>
+    <h1>Code Generation</h1>
+    <section>TODO</section>
+</section>
+
+<section>
+    <h1>Supported Languages</h1>
+    <p>Kotlin</p>
+    <p>Java</p>
+    <p>TypeScript</p>
+    <p>JavaScript</p>
+    <p>Native (Android/iOS)</p>
+</section>
+
+<!-- TODO explain how/why new functional features do not require glue logic  -->
+<!-- TODO explain how/why new non-functional features can be added without modifying existing functional features -->

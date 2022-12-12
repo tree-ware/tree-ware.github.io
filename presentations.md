@@ -3,4 +3,5 @@ title: Presentations
 layout: page
 ---
 
-* [Introduction to Tree-Ware](presentations/introduction-to-tree-ware.html)
+* [Tree-Ware Introduction](presentations/tree-ware-introduction.html)
+* [Tree-Ware Architecture](presentations/tree-ware-architecture.html)
