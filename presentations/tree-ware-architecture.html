@@ -9,8 +9,7 @@ layout: reveal
 
 <section>
     <h1>Data-First</h1>
-    <section>The data corresponding to FUNCTIONAL features must be defined first</section>
-    <section>Tree-ware provides the architectural features for this data</section>
+    <section>The data corresponding to features must be defined first</section>
 </section>
 
 <section>
@@ -32,7 +31,7 @@ layout: reveal
 <section>
     <h1>Aux Data</h1>
     <section>Auxiliary data can be attached to any node in the model tree</section>
-    <section>Used for architectural aspects</section>
+    <section>Used for cross-cutting aspects</section>
     <section>Examples: errors, access-control definitions, DB mappings</section>
 </section>
 
@@ -50,9 +49,9 @@ layout: reveal
     <h1>System Architecture</h1>
     <section>There is a pipeline from the UI to the DB and beyond</section>
     <section>Models flow through this pipeline in both directions</section>
-    <section>Most pipeline stages implement an architectural feature</section>
+    <section>Most pipeline stages implement cross-cutting aspects</section>
     <section>Custom business-logic is also a stage in the pipeline</section>
-    <section>Each architectural stage is implemented as an operator</section>
+    <section>Each cross-cutting stage is implemented as an operator</section>
     <section>The pipeline is in essence an expression composed of operators</section>
     <section><img src="./pipeline.drawio.svg"></section>
 </section>
@@ -61,21 +60,21 @@ layout: reveal
     <h1>Architecture Benefits</h1>
     <section>The pipeline can be run on a single machine or distributed across multiple machines</section>
     <section>
-        <p>The pipeline can support new functional features</p>
-        <p>without glue logic</p>
+        <p>The pipeline can support new features</p>
+        <p>without glue logic for cross-cutting aspects</p>
     </section>
     <section>
-        <p>New architectural features can be inserted</p>
+        <p>New cross-cutting aspects can be inserted</p>
         <p>as pipeline stages</p>
-        <p>without modifying existing functional features</p>
+        <p>without modifying existing features</p>
     </section>
 </section>
 
 <section>
     <h1>Tree-Ware Design Pattern</h1>
-    <section>Use models for functional-data</section>
-    <section>Use aux data for architectural data</section>
-    <section>Use model operators to implement architectural features</section>
+    <section>Use models for feature-data</section>
+    <section>Use aux data for cross-cutting aspects</section>
+    <section>Use model operators to implement cross-cutting aspects</section>
 </section>
 
 <section>
@@ -159,9 +158,9 @@ layout: reveal
 
 <section>
     <h1>Recap: Tree-Ware Design Pattern</h1>
-    <section>Use models for functional-data</section>
-    <section>Use aux data for architectural data</section>
-    <section>Use model operators to implement architectural features</section>
+    <section>Use models for feature-data</section>
+    <section>Use aux data for cross-cutting aspects</section>
+    <section>Use model operators to implement cross-cutting aspects</section>
 </section>
 
 <section>

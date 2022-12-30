@@ -12,13 +12,28 @@ layout: reveal
     <section>Companies struggle with feature velocity</section>
     <section>They use a lot of open-source software to speed up their development</section>
     <section>But that alone is <b>NOT</b> sufficient!</section>
-    <section>Every new functional feature requires glue-logic across all this open-source software</section>
-    <section>Every new architectural feature requires modifications to all existing functional features</section>
-    <section>It is very hard to ensure all features are implemented consistently</section>
+
+    <section>Every feature requires a lot of cross-cutting aspects to be implemented</section>
+    <section>UI for user-input and feature-metrics</section>
+    <section>APIs for user input and feature metrics</section>
+    <section>RBAC for the APIs</section>
+    <section>Caching</section>
+    <section>Storage for user input and feature metrics</section>
+    <section>Full-text search</section>
+    <section>Rolling up of feature metrics across space & time</section>
+    <section>And a lot more such cross-cutting aspects</section>
+
+    <section>There is open-source software for each of the above, but they need to be glued together for each feature</section>
+
+    <section>New features require glue-logic for cross-cutting aspects</section>
+    <section>New cross-cutting aspects require updates in existing features</section>
+
     <section>
-        <p>The initial rush-to-market results in bad practices</p>
-        <p>And that results in slower subsequent releases</p>
+        <p>The initial rush-to-market results in</p>
+        <p>many of the cross-cutting aspects being left out</p>
+        <p>and inconsistently implemented features</p>
     </section>
+    <section>Inconsistent feature implementations make it hard to add new cross-cutting aspects</section>
 </section>
 
 <section>
@@ -39,16 +54,13 @@ layout: reveal
         <p><b>Open-source</b></p>
         <p><a href="https://github.com/tree-ware">https://github.com/tree-ware</a></p>
     </section>
-    <section>New functional features do NOT require glue-logic across the software stack</section>
-    <section>New architectural features can be added WITHOUT modifying existing functional features</section>
     <section>
-        <p>The bulk of the feature implementation is in tree-ware</p>
-        <p>This ensures all features are implemented consistently</p>
+        <p>Tree-ware lets you rush-to-market</p>
+        <p>with a slew of cross-cutting aspects included out of the box</p>
+        <p>and consistently implemented features</p>
     </section>
-    <section>
-        <p>Tree-ware lets you rush-to-market without bad practices</p>
-        <p>Tree-ware further enables faster subsequent releases</p>
-    </section>
+    <section>New features automatically get cross-cutting aspects from tree-ware</section>
+    <section>New cross-cutting aspects do NOT require updates in existing features</section>
 </section>
 
 <section>
@@ -57,7 +69,7 @@ layout: reveal
         <p>Developers only define the following:</p>
         <ol>
             <li>a schema for the product/service data</li>
-            <li>custom business-logic (if any)</li>
+            <li>custom business-logic</li>
         </ol>
     </section>
     <section>Tree-ware takes care of everything else</section>
@@ -66,8 +78,8 @@ layout: reveal
 <section>
     <h1>How Does it Work?</h1>
     <section>Tree-ware uses a <b>data-first</b> approach</section>
-    <section>Developers define the data corresponding to the functional features</section>
-    <section>And tree-ware provides the architectural features</section>
+    <section>Developers define the data corresponding to the features</section>
+    <section>And tree-ware provides the cross-cutting aspects</section>
     <section>
         <p>It sets up & operates infrastructure</p>
         <p><b><i>for</i></b></p>
@@ -86,6 +98,7 @@ layout: reveal
 
 <section><img src="./block-diagram.drawio.svg"></section>
 
+<!--
 <section>
     <h1>Is this No-Code?</h1>
     <section>Yes and No</section>
@@ -104,6 +117,7 @@ layout: reveal
         <p>developers build products with tree-ware</p>
     </section>
 </section>
+-->
 
 <section>
     <h1>Common Concerns</h1>
@@ -134,9 +148,15 @@ layout: reveal
 
 <section>
     <h1>Recap</h1>
-    <section>Tree-ware accelerates feature development by taking care of all architectural aspects</section>
-    <section>Developers only specify the schema of functional data, and any custom business-logic</section>
-    <section>New architectural features can be added WITHOUT modifying existing functional features</section>
+    <section>Tree-ware accelerates feature development by taking care of all cross-cutting aspects</section>
+    <section>
+        <p>Developers only define the following:</p>
+        <ol>
+            <li>a schema for the product/service data</li>
+            <li>custom business-logic</li>
+        </ol>
+    </section>
+    <section>New cross-cutting aspects can be added WITHOUT modifying existing features</section>
 </section>
 
 <section><h1>The End</h1></section>
