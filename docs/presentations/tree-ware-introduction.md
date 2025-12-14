@@ -1,5 +1,5 @@
 ---
-layout: reveal
+template: reveal.html
 ---
 
 <section>
@@ -96,7 +96,7 @@ layout: reveal
     </section>
 </section>
 
-<section><img src="./block-diagram.drawio.svg"></section>
+<section><img src="/presentations/block-diagram.drawio.svg"></section>
 
 <!--
 <section>

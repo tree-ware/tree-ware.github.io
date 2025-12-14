@@ -1,5 +1,5 @@
 ---
-layout: reveal
+template: reveal.html
 ---
 
 <section>
@@ -53,7 +53,7 @@ layout: reveal
     <section>Custom business-logic is also a stage in the pipeline</section>
     <section>Each cross-cutting stage is implemented as an operator</section>
     <section>The pipeline is in essence an expression composed of operators</section>
-    <section><img src="./pipeline.drawio.svg"></section>
+    <section><img src="/presentations/pipeline.drawio.svg"></section>
 </section>
 
 <section>
@@ -97,7 +97,7 @@ layout: reveal
     </section>
     <section>An intersection operator intersects API requests/responses with the RBAC model</section>
     <section>Only the common parts (the intersection result) are permitted to the next stage in the pipeline</section>
-    <section><img src="./rbac.drawio.svg"></section>
+    <section><img src="/presentations/rbac.drawio.svg"></section>
 </section>
 
 <section>

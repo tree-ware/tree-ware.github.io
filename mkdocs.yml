@@ -1,0 +1,30 @@
+site_name: Tree-Ware
+site_url: https://www.tree-ware.org
+nav:
+  - index.md
+  - presentations.md
+  - docs.md
+plugins:
+  - search
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/tree-ware
+      name: Tree-Ware on GitHub
+theme:
+  name: material
+  custom_dir: overrides
+  palette:
+    scheme: slate
+    primary: light green
+    accent: green
+  features:
+    - navigation.expand
+    - navigation.indexes
+    - navigation.path
+    - navigation.sections
+    - navigation.tracking
+    - search.highlight
+    - search.suggest
+    - toc.follow
+    - toc.integrate

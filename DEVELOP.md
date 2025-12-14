@@ -1,33 +1,37 @@
 # Initial Setup
 
-Create a directory for caching gems needed by Jekyll:
+Create a Python virtual environment:
 
 ```
-mkdir -p $HOME/jekyll/gem
+python3 -m venv mkdocs-material-venv/ 
 ```
 
-Install the Jekyll container:
+Activate the Python virtual environment:
 
 ```
-docker pull jekyll/jekyll
+source mkdocs-material-venv/bin/activate
 ```
 
-# Start Local Jekyll Server
-
-Run a shell in the container from the repository root directory:
+Install `mkdocs-material`:
 
 ```
-docker run --rm --volume=$PWD:/srv/jekyll --volume=$HOME/jekyll/gem:/usr/gem --publish 4000:4000 -it jekyll/jekyll /bin/bash
+pip install mkdocs-material
 ```
 
-In the container shell:
+# Start Local Server
+
+Activate the Python virtual environment:
 
 ```
-PAGES_REPO_NWO=tree-ware/tree-ware.github.io jekyll serve --incremental
+source mkdocs-material-venv/bin/activate
 ```
 
-Open: http://localhost:4000
+Run the following from the repository root directory:
 
-The server rebuilds the pages whenever a source file changes.
+```
+mkdocs serve
+```
 
-Refresh the browser after a few seconds to see the changes.
+Open: http://127.0.0.1:8000
+
+The server rebuilds the pages whenever a source file changes and automatically reloads the browser.
