@@ -1,7 +1,4 @@
----
-layout: page
-title: Docs
----
+# Docs
 
 * [Kotlin Core](http://www.tree-ware.org/tree-ware-kotlin-core/)
 * [Kotlin MySQL](http://www.tree-ware.org/tree-ware-kotlin-mysql/)
