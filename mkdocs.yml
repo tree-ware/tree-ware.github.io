@@ -24,7 +24,6 @@ theme:
     - navigation.indexes
     - navigation.path
     - navigation.sections
-    - navigation.tabs
     - navigation.tracking
     - search.highlight
     - search.suggest
