@@ -4,8 +4,11 @@ nav:
   - index.md
   - presentations.md
   - docs.md
+  - blog/index.md
 plugins:
   - search
+  - blog:
+      authors_profiles: true
 extra:
   social:
     - icon: fontawesome/brands/github
