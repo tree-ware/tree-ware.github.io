@@ -10,7 +10,8 @@ categories:
 # LLMs and Patterns in Code
 
 Why are LLMs so good at generating code? It is because code tends to be structured and follows certain patterns.
-LLMs are able to learn those patterns and generate code that conforms to those patterns.
+There are a lot of repeating patterns even _within the code of a single system_. For example, REST APIs follow a
+pattern. LLMs are able to learn these patterns and generate code matching these patterns.
 
 But are patterns in your code a good thing?
 
@@ -27,10 +28,11 @@ generating by hand the expansions of some macro that I need to write.
 
 and:
 
-> [Peter Norvig][3] found that 16 of the 23 patterns in Design Patterns were "[invisible or simpler][4]" in Lisp.
+> [Peter Norvig][3] found that 16 of the 23 patterns in [Design Patterns][7] were "[invisible or simpler][4]" in Lisp.
 
 You may be thinking, "what is the big deal? Instead of a macro, the LLM is generating the code." But would you think the
-same about functions? Would you be okay with an LLM generating code inline instead of creating and using a function?
+same about functions? Would you be okay with an LLM generating code inline for _everything_ instead of creating and using
+functions?
 
 There are two problems with using LLMs to generate code. The first is that you can't trust the LLM, and so you need to
 review all the code it generates. The more an LLM generates, the more there is for you to review. The second problem is
@@ -38,11 +40,11 @@ that when you ask the LLM to modify your code later on, it needs to read in a lo
 its context window.
 
 If there is an abstraction, then you can generate code deterministically and trust it without having to review it.
-Even if LLMs become trustworthy in the future, why pay for an LLM when you can use a simpler and cheaper deterministinc
+Even if LLMs become trustworthy in the future, why pay for an LLM when you can use a simpler and cheaper deterministic
 approach? For example, would you use an LLM instead of the protobuf compiler `protoc` to generate classes from a
 `.proto` file? It makes sense to use an LLM to create the `.proto` file, but not to generate classes from it.
 
-People are able to generate entire frontends and backends using LLMs these days. The non-functional aspects are similar
+People are able to generate entire multi-tier systems using LLMs these days. The non-functional aspects are similar
 in all such systems. So LLMs are able to generate such systems. Is there an abstraction that can do the same? The answer
 is yes! And ironically, it does _**not**_ generate code! Instead, it uses abstract-algebra to carry out the
 non-functional aspects of the system.
@@ -56,3 +58,4 @@ to be built, so contributions are most welcome! And one last bit of irony: you c
 [4]: http://www.norvig.com/design-patterns/
 [5]: https://www.tree-ware.org
 [6]: https://kotlinlang.org
+[7]: https://en.wikipedia.org/wiki/Design_Patterns
